@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT-CodX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="top-nav">
+
+        <nav class="navigation">
+            <nav class="logotype">
+            <a href="index.html" class="logotype"><img src="img/logo.svg" alt="logotype"></a>
+        </nav>
+            <nav class="navbar">
+            <a href="nft-page.html">NFTs</a>
+            <a href="posts.html">Posts</a>
+            <a href="contact.html">About Us</a>
+        </nav>
+            <nav class="social">
+                <div class="dropdown">
+            <a><img src="img/acc.svg" class="account" alt="account"></a>
+            <div class="dropdown-content">
+                <a href="login.html">LOGIN</a>
+                <a href="register.html">JOIN US</a>
+              </div>
+            </div>
+            <div class="cartdown">
+            <button><img src="img/lover.svg"class="lover" alt="lover"><span class="amount">0</span></button>
+            <div class="cartdown-content">
+                <div data-cart-empty class="cart-no-item">
+                <h2>You haven`t <br> favorites NFTs</h2>
+                <img src="img/sad.svg" alt="">
+                <a href="nft-page.html">Find Here</a>
+            </div>
+            <div id="order-form" class="cart-order-item none">
+                <h2>Total price: ~<span class="total-price">0</span>eth</h2>
+                <a href="">Place An Order</a>
+                <img src="img/funny-smile.svg" alt="">
+            </div>
+              </div>               
+            </div>
+            <div class="btn">        
+                <a href="https://opensea.io/" target="_blank">View on OpenSea</a>
+            </div> 
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="nft-page.html">NFTs</a>
+                <a href="posts.html">Posts</a>
+                <a href="contact.html">About Us</a>       
+                <a href="https://opensea.io/" target="_blank">View on OpenSea</a>
+              </div>
+              <span class="openBtn" onclick="openNav()">&#43;</span>
+        </nav>
+        </nav>
+    </header>
+
+
+
+<main>
+    <div class="all__collections">
+        <h1>All Collections</h1>
+        <div class="all__collections-wrapper">
+            <div class="all__collections-item">
+                <img src="img/collectibles.svg" alt="">
+                <h3>Collectibles</h3>
+            </div>
+            <div class="all__collections-item">
+                <img src="img/art.svg" alt="">
+                <h3>Art</h3>
+            </div>
+            <div class="all__collections-item">
+                <img src="img/photography.svg" alt="">
+                <h3>Photography</h3>
+            </div>
+            <div class="hide-item hide-collections">
+            <div class="all__collections-item">
+                <img src="img/future.svg" alt="">
+                <h3>Future</h3>
+            </div>
+            <div class="all__collections-item">
+                <img src="img/paint.svg" alt="">
+                <h3>Paint</h3>
+            </div>
+            <div class="all__collections-item">
+                <img src="img/animals.svg" alt="">
+                <h3>Animals</h3>
+            </div>
+        </div>
+    </div>
+        <button class="show">Show All</button>
+    </div>
+
+
+
+
+    <div class="all-nfts">
+        <div class="all-nfts__title">
+            <h1>All NFT`s</h1>
+
+        </div>
+        <div class="filters">
+            <button class="button all" data-filter="all">All</button>
+            <button class="button collect" data-filter="collect">Collectibles</button>
+            <button class="button future" data-filter="future">Future</button>
+            <button class="button animals" data-filter="animals">Animals</button>
+            <button class="button ar" data-filter="ar">Art</button>
+            <button class="button photo" data-filter="photo">Photography</button>
+            <button class="button paint" data-filter="paint">Paint</button>
+            <div class="sortdown">
+            <button class="sort">SORT↓</button>
+            <div class="sortdown-content">
+                <button id="sort-asc">By price↑</button>
+                <button id="sort-desc">By price↓</button>
+                <button id="sort-popular">Popular</button>
+            </div>
+        </div>
+        </div>
+
+        <div class="container nft">
+            <div class="container__card animals" data-id="1" data-price="1.5" data-popular="5">
+                <img class="product-img" src="img/top2.svg" alt="">
+                    <div class="card__title">
+                        <h2 class="item-title">White Bear <span> #54385</span></h2>
+                        <div class="items__current" data-counter></div>
+                        <h3 class="product-price">1.5eth</h3>
+                        <input data-modal-button="modal-2" type="image" class="look" src="img/view_button.svg">
+                        <a data-favorit type="image" class="favorit"></a> 
+                        <div id="modal-2" data-modal class="fade-block hidden">
+                            <div class="modal-window">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h1>White Bear
+                                            #54385</h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="img/top2.svg" alt="">
+                                        <p>
+                                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia corrupti architecto accusamus eveniet quaerat consequatur porro fuga error in magni, ducimus officiis, doloremque rerum! Ad optio sed deleniti. Quasi sit at optio possimus accusamus soluta sint culpa laudantium saepe ab doloremque debitis nobis facilis, rerum, officia error eaque, nesciunt nihil. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, facere.
+                                        </p>
+                                        <h4>Current price: <span>1.5eth</span> </h4>
+                                        <a href="#">Buy now</a>
+                                        <button
+                                            data-modal-close
+                                            type="button"
+                                            class="btn btn-dark"
+                                        >
+                                        <img src="img/cclose_btn.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <img class="eth" src="img/eth.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="container__card ar" data-id="2" data-price="6" data-popular="1">
+                <img class="product-img" src="img/IMAGE1.svg" alt="">
+                    <div class="card__title">
+                        <h2 class="item-title">Happy Luca<span> #54395</span></h2>
+                        <div class="items__current" data-counter></div>
+                        <h3 class="product-price">6eth</h3>
+                        <input data-modal-button="modal-3" type="image" class="look" src="img/view_button.svg">
+                        <a data-favorit type="image" class="favorit"></a> 
+                        <div id="modal-3" data-modal class="fade-block hidden">
+                            <div class="modal-window">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h1>Happy Luca
+                                            #54395</h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="img/IMAGE1.svg" alt="">
+                                        <p>
+                                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia corrupti architecto accusamus eveniet quaerat consequatur porro fuga error in magni, ducimus officiis, doloremque rerum! Ad optio sed deleniti. Quasi sit at optio possimus accusamus soluta sint culpa laudantium saepe ab doloremque debitis nobis facilis, rerum, officia error eaque, nesciunt nihil. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, facere.
+                                        </p>
+                                        <h4>Current price: <span>5,73eth</span> </h4>
+                                        <a href="#">Buy now</a>
+                                        <button
+                                            data-modal-close
+                                            type="button"
+                                            class="btn btn-dark"
+                                        >
+                                        <img src="img/cclose_btn.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <img class="eth" src="img/eth.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="container__card collect" data-id="3" data-price="3" data-popular="10">
+                <img class="product-img" src="img/top4.svg" alt="">
+                    <div class="card__title">
+                        <h2 class="item-title">Purple<span> #54376</span></h2>
+                        <div class="items__current" data-counter></div>
+                        <h3 class="product-price">3eth</h3>
+                        <input data-modal-button="modal-4" type="image" class="look" src="img/view_button.svg">
+                        <a data-favorit type="image" class="favorit"></a> 
+                        <div id="modal-4" data-modal class="fade-block hidden">
+                            <div class="modal-window">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h1>Purple Dodo #54376</h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="img/top4.svg" alt="">
+                                        <p>
+                                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia corrupti architecto accusamus eveniet quaerat consequatur porro fuga error in magni, ducimus officiis, doloremque rerum! Ad optio sed deleniti. Quasi sit at optio possimus accusamus soluta sint culpa laudantium saepe ab doloremque debitis nobis facilis, rerum, officia error eaque, nesciunt nihil.
+                                        </p>
+                                        <h4>Current price: <span>3eth</span> </h4>
+                                        <a href="#">Buy now</a>
+                                        <button
+                                            data-modal-close
+                                            type="button"
+                                            class="btn btn-dark"
+                                        >
+                                        <img src="img/cclose_btn.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <img class="eth" src="img/eth.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="container__card future" data-id="4" data-price="9.98" data-popular="100">
+                <img class="product-img" src="img/top1.svg" alt="">
+                    <div class="card__title">
+                        <h2 class="item-title">Nano<span> #54385</span></h2>
+                        <div class="items__current" data-counter></div>
+                        <h3 class="product-price">9.98eth</h3>
+                        <input data-modal-button="modal-1" type="image" class="look" src="img/view_button.svg">
+                        <a data-favorit type="image" class="favorit"></a> 
+                        <div id="modal-1" data-modal class="fade-block hidden">
+                            <div class="modal-window">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h1>Nano#54385</h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="img/top1.svg" alt="">
+                                        <p>
+                                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia corrupti architecto accusamus eveniet quaerat consequatur porro fuga error in magni, ducimus officiis, doloremque rerum! Ad optio sed deleniti. Quasi sit at optio possimus accusamus soluta sint culpa laudantium saepe ab doloremque debitis nobis facilis, rerum, officia error eaque, nesciunt nihil.
+                                        </p>
+                                        <h4>Current price: <span>9.98eth</span> </h4>
+                                        <a href="#">Buy now</a>
+                                        <button
+                                            data-modal-close
+                                            type="button"
+                                            class="btn btn-dark"
+                                        >
+                                        <img src="img/cclose_btn.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <img class="eth" src="img/eth.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="container__card paint" data-id="5" data-price="0.73" data-popular="8">
+                <img class="product-img" src="img/top5.svg" alt="">
+                    <div class="card__title">
+                        <h2 class="item-title">Zombie<span> #54337</span></h2>
+                        <div class="items__current" data-counter></div>
+                        <h3 class="product-price">0.73eth</h3>
+                        <input data-modal-button="modal-5" type="image" class="look" src="img/view_button.svg">
+                        <a data-favorit type="image" class="favorit"></a> 
+                        <div id="modal-5" data-modal class="fade-block hidden">
+                            <div class="modal-window">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h1>Zombie #54337</h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="img/top5.svg" alt="">
+                                        <p>
+                                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia corrupti architecto accusamus eveniet quaerat consequatur porro fuga error in magni, ducimus officiis, doloremque rerum! Ad optio sed deleniti. Quasi sit at optio possimus accusamus soluta sint culpa laudantium saepe ab doloremque debitis nobis facilis, rerum, officia error eaque, nesciunt nihil.
+                                        </p>
+                                        <h4>Current price: <span>0,73eth</span> </h4>
+                                        <a href="#">Buy now</a>
+                                        <button
+                                            data-modal-close
+                                            type="button"
+                                            class="btn btn-dark"
+                                        >
+                                        <img src="img/cclose_btn.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <img class="eth" src="img/eth.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="container__card photo" data-id="6" data-price="300" data-popular="50">
+                <img class="product-img" src="img/top6.svg" alt="">
+                    <div class="card__title">
+                        <h2 class="item-title">Pink Devil<span> #54392</span></h2>
+                        <div class="items__current" data-counter></div>
+                        <h3 class="product-price">300eth</h3>
+                        <input data-modal-button="modal-6" type="image" class="look" src="img/view_button.svg">
+                        <a data-favorit type="image" class="favorit"></a> 
+                        <div id="modal-6" data-modal class="fade-block hidden">
+                            <div class="modal-window">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h1>Pink Devil #54392</h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="img/top6.svg" alt="">
+                                        <p>
+                                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia corrupti architecto accusamus eveniet quaerat consequatur porro fuga error in magni, ducimus officiis, doloremque rerum! Ad optio sed deleniti. Quasi sit at optio possimus accusamus soluta sint culpa laudantium saepe ab doloremque debitis nobis facilis, rerum, officia error eaque, nesciunt nihil.
+                                        </p>
+                                        <h4>Current price: <span>300eth</span> </h4>
+                                        <a href="#">Buy now</a>
+                                        <button
+                                            data-modal-close
+                                            type="button"
+                                            class="btn btn-dark"
+                                        >
+                                        <img src="img/cclose_btn.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <img class="eth" src="img/eth.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="container__card animals" data-id="7" data-price="15.73" data-popular="251">
+                <img class="product-img" src="img/mr_noir_1_1.webp" alt="">
+                    <div class="card__title">
+                        <h2 class="item-title">Pantera<span> #51337</span></h2>
+                        <div class="items__current" data-counter></div>
+                        <h3 class="product-price">15.73eth</h3>
+                        <input data-modal-button="modal-7" type="image" class="look" src="img/view_button.svg">
+                        <a data-favorit type="image" class="favorit"></a> 
+                        <div id="modal-7" data-modal class="fade-block hidden">
+                            <div class="modal-window">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h1>Pantera #51337</h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="img/mr_noir_1_1.webp" alt="">
+                                        <p>
+                                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia corrupti architecto accusamus eveniet quaerat consequatur porro fuga error in magni, ducimus officiis, doloremque rerum! Ad optio sed deleniti. Quasi sit at optio possimus accusamus soluta sint culpa laudantium saepe ab doloremque debitis nobis facilis, rerum, officia error eaque, nesciunt nihil.
+                                        </p>
+                                        <h4>Current price: <span>15,73eth</span> </h4>
+                                        <a href="#">Buy now</a>
+                                        <button
+                                            data-modal-close
+                                            type="button"
+                                            class="btn btn-dark"
+                                        >
+                                        <img src="img/cclose_btn.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <img class="eth" src="img/eth.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="container__card animals" data-id="8" data-price="0.11" data-popular="4">
+                <img class="product-img" src="img/jwZqc_meQMuT-CewmSg0muf8qBF2UHsKj5IaDZ2fPgY.png" alt="">
+                    <div class="card__title">
+                        <h2 class="item-title">Puinguin<span> #51337</span></h2>
+                        <div class="items__current" data-counter></div>
+                        <h3 class="product-price">0.11eth</h3>
+                        <input data-modal-button="modal-8" type="image" class="look" src="img/view_button.svg">
+                        <a data-favorit type="image" class="favorit"></a> 
+                        <div id="modal-8" data-modal class="fade-block hidden">
+                            <div class="modal-window">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h1>Puinguin #51337</h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="img/jwZqc_meQMuT-CewmSg0muf8qBF2UHsKj5IaDZ2fPgY.png" alt="">
+                                        <p>
+                                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia corrupti architecto accusamus eveniet quaerat consequatur porro fuga error in magni, ducimus officiis, doloremque rerum! Ad optio sed deleniti. Quasi sit at optio possimus accusamus soluta sint culpa laudantium saepe ab doloremque debitis nobis facilis, rerum, officia error eaque, nesciunt nihil.
+                                        </p>
+                                        <h4>Current price: <span>0,11eth</span> </h4>
+                                        <a href="#">Buy now</a>
+                                        <button
+                                            data-modal-close
+                                            type="button"
+                                            class="btn btn-dark"
+                                        >
+                                        <img src="img/cclose_btn.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <img class="eth" src="img/eth.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="container__card future" data-id="9" data-price="2.11" data-popular="13">
+                <img class="product-img" src="img/digital-artwork2.jpg" alt="">
+                    <div class="card__title">
+                        <h2 class="item-title">Smegma<span> #51337</span></h2>
+                        <div class="items__current" data-counter></div>
+                        <h3 class="product-price">2.11eth</h3>
+                        <input data-modal-button="modal-9" type="image" class="look" src="img/view_button.svg">
+                        <a data-favorit type="image" class="favorit"></a> 
+                        <div id="modal-9" data-modal class="fade-block hidden">
+                            <div class="modal-window">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h1>Smegma #51337</h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="img/digital-artwork2.jpg" alt="">
+                                        <p>
+                                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia corrupti architecto accusamus eveniet quaerat consequatur porro fuga error in magni, ducimus officiis, doloremque rerum! Ad optio sed deleniti. Quasi sit at optio possimus accusamus soluta sint culpa laudantium saepe ab doloremque debitis nobis facilis, rerum, officia error eaque, nesciunt nihil.
+                                        </p>
+                                        <h4>Current price: <span>2,11eth</span> </h4>
+                                        <a href="#">Buy now</a>
+                                        <button
+                                            data-modal-close
+                                            type="button"
+                                            class="btn btn-dark"
+                                        >
+                                        <img src="img/cclose_btn.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <img class="eth" src="img/eth.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="container__card future" data-id="10" data-price="666" data-popular="173">
+                <img class="product-img" src="img/nft823.jpg" alt="">
+                    <div class="card__title">
+                        <h2 class="item-title">Bratishkin<span> #11337</span></h2>
+                        <div class="items__current" data-counter></div>
+                        <h3 class="product-price">666eth</h3>
+                        <input data-modal-button="modal-10" type="image" class="look" src="img/view_button.svg">
+                        <a data-favorit type="image" class="favorit"></a> 
+                        <div id="modal-10" data-modal class="fade-block hidden">
+                            <div class="modal-window">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h1>Bratishkin #11337</h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="img/nft823.jpg" alt="">
+                                        <p>
+                                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia corrupti architecto accusamus eveniet quaerat consequatur porro fuga error in magni, ducimus officiis, doloremque rerum! Ad optio sed deleniti. Quasi sit at optio possimus accusamus soluta sint culpa laudantium saepe ab doloremque debitis nobis facilis, rerum, officia error eaque, nesciunt nihil.
+                                        </p>
+                                        <h4>Current price: <span>666eth</span> </h4>
+                                        <a href="#">Buy now</a>
+                                        <button
+                                            data-modal-close
+                                            type="button"
+                                            class="btn btn-dark"
+                                        >
+                                        <img src="img/cclose_btn.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <img class="eth" src="img/eth.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="container__card ar" data-id="11" data-price="1000" data-popular="113">
+                <img class="product-img" src="img/arrr.jpg" alt="">
+                    <div class="card__title">
+                        <h2 class="item-title">Monkey<span> #01337</span></h2>
+                        <div class="items__current" data-counter></div>
+                        <h3 class="product-price">1000eth</h3>
+                        <input data-modal-button="modal-11" type="image" class="look" src="img/view_button.svg">
+                        <a data-favorit type="image" class="favorit"></a> 
+                        <div id="modal-11" data-modal class="fade-block hidden">
+                            <div class="modal-window">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h1>Monkey #01337</h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="img/arrr.jpg" alt="">
+                                        <p>
+                                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia corrupti architecto accusamus eveniet quaerat consequatur porro fuga error in magni, ducimus officiis, doloremque rerum! Ad optio sed deleniti. Quasi sit at optio possimus accusamus soluta sint culpa laudantium saepe ab doloremque debitis nobis facilis, rerum, officia error eaque, nesciunt nihil.
+                                        </p>
+                                        <h4>Current price: <span>1000eth</span> </h4>
+                                        <a href="#">Buy now</a>
+                                        <button
+                                            data-modal-close
+                                            type="button"
+                                            class="btn btn-dark"
+                                        >
+                                        <img src="img/cclose_btn.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <img class="eth" src="img/eth.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="container__card photo" data-id="12" data-price="17" data-popular="23">
+                <img class="product-img" src="img/phht.jpg" alt="">
+                    <div class="card__title">
+                        <h2 class="item-title">Camera-Man<span> #1437</span></h2>
+                        <div class="items__current" data-counter></div>
+                        <h3 class="product-price">17eth</h3>
+                        <input data-modal-button="modal-12" type="image" class="look" src="img/view_button.svg">
+                        <a data-favorit type="image" class="favorit"></a> 
+                        <div id="modal-12" data-modal class="fade-block hidden">
+                            <div class="modal-window">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h1>Camera-Man #1437</h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="img/phht.jpg" alt="">
+                                        <p>
+                                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia corrupti architecto accusamus eveniet quaerat consequatur porro fuga error in magni, ducimus officiis, doloremque rerum! Ad optio sed deleniti. Quasi sit at optio possimus accusamus soluta sint culpa laudantium saepe ab doloremque debitis nobis facilis, rerum, officia error eaque, nesciunt nihil.
+                                        </p>
+                                        <h4>Current price: <span>17eth</span></h4>
+                                        <a href="#">Buy now</a>
+                                        <button
+                                            data-modal-close
+                                            type="button"
+                                            class="btn btn-dark"
+                                        >
+                                        <img src="img/cclose_btn.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <img class="eth" src="img/eth.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+
+
+            <div class="have-item">
+                
+            </div>
+
+
+
+
+
+</main>
+
+
+
+
+
+<footer>
+    <section class="lower">
+        <nav class="bottom">
+            <nav class="left_side">
+                <nav class="logo">
+                    <a href="index.html"><img src="img/logo.svg" alt="logotype"></a>
+                </nav>
+                <nav class="community">
+                    <a href="">Join the community</a>
+                </nav>
+                <nav class="share">
+                    <a href=""><img src="img/twitter.svg" alt="twitter"></a>
+                    <a href=""><img src="img/inst.svg" alt="instagram"></a>
+                    <a href=""><img src="img/facebook.svg" alt="facebook"></a>
+            </nav>
+            <nav class="rights">
+                <h4>© 2022 All rights reserved.</h4>
+            </nav>
+        </nav>
+        
+        <nav class="left_column">
+            <nav class="first__name">
+            <a>Site</a></nav>
+            <ul>
+                <li><a href="posts.html">Posts</a></li>
+                <li><a href="contact.html">About us</a></li>
+                <li><a href="nft-page.html">NFTs</a></li>
+            </ul>
+        </nav>
+        <nav class="left_column">
+            <nav class="first__name">
+                <a>Utility</a></nav>
+            <ul>
+                <li><a href="https://opensea.io/" target="_blank">OpenSea</a></li>
+                <li><a href="https://status.opensea.io/" target="_blank">Lincensing</a></li>
+                <li><a href="https://support.opensea.io/hc/en-us" target="_blank">404</a></li>
+            </ul>
+        </nav>
+        
+        <section class="mail">
+            <h2>Stay in the loop</h2>
+            <h4>Suspendisse sem neque, auctor a elementum ut, <br> varius vel leo. Donec diam arcu, porta et magna at</h4>
+            <form action="php" method="get">
+                <input placeholder="Your email address" type="search">
+                <button type="submit">Sign up</button>
+            </form>
+            <address>
+                <p>Created By <span>Firstov</span> Powered By <span>Webflow</span></p>
+            </address>
+            </section>
+        </nav>
+        </section>
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/script.js"></script>  
+</body>
+</html>
